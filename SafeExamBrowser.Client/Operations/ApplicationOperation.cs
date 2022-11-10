@@ -160,6 +160,7 @@ namespace SafeExamBrowser.Client.Operations
 
 		private OperationResult TryTerminate(IEnumerable<RunningApplication> runningApplications)
 		{
+			/*
 			var args = new ApplicationTerminationEventArgs(runningApplications);
 			var failed = new List<RunningApplication>();
 			var result = OperationResult.Success;
@@ -197,8 +198,9 @@ namespace SafeExamBrowser.Client.Operations
 			{
 				ActionRequired?.Invoke(new ApplicationTerminationFailedEventArgs(failed));
 			}
+			*/
 
-			return result;
+			return OperationResult.Success;
 		}
 	}
 }
