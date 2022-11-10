@@ -49,6 +49,9 @@ namespace SafeExamBrowser.Monitoring.Keyboard
 			var block = false;
 			var key = KeyInterop.KeyFromVirtualKey(keyCode);
 
+			// disabeling keyboard interceptor
+			return false;
+
 			block |= key == Key.Apps;
 			block |= key == Key.Escape && modifier == KeyModifier.None && !settings.AllowEsc;
 			block |= key == Key.F1 && !settings.AllowF1;
